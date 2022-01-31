@@ -4,6 +4,8 @@ interface ColumnInterface {
   attributeChangedCallback(name: string, oldValue: string, newValue: string): void;
   connectedCallback(): void;
   updateStyleBySpan(span: SpanType): void;
+  setContent(content: HTMLElement | string): this;
+  setSpan(span: SpanType): this;
 }
 
 interface ColumnConstructorProps {
