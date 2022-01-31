@@ -2,8 +2,7 @@
   !*** css ./node_modules/css-loader/dist/cjs.js!./website/index.css ***!
   \*********************************************************************/
 .layout {
-    min-height: 100vh;
-    padding: 20px;
+    min-height: calc(100vh - 200px);
     display: flex;
     align-items: center;
     flex-direction: column;
