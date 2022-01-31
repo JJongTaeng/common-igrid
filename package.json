@@ -17,6 +17,8 @@
   "author": "JJongTaeng",
   "license": "MIT",
   "dependencies": {
+    "common-icard": "^1.0.0",
+    "common-iform": "^1.0.6",
     "common-iutils": "^1.0.3"
   },
   "devDependencies": {
