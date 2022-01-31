@@ -1,0 +1,39 @@
+{
+  "name": "common-igrid",
+  "version": "1.0.0",
+  "description": "Simple Grid library using Webcomponent",
+  "main": "dist/cjs/src/index.js",
+  "module": "dist/esm/src/index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "webpack": "webpack",
+    "build": "rm -rf dist && npm run esm && npm run cjs",
+    "predeploy": "rm -rf ./build && webpack",
+    "deploy": "rm -rf ./node_modules/.cache/gh-pages && gh-pages --branch gh-pages -d build",
+    "esm": "tsc -p tsconfig.esm.json",
+    "cjs": "tsc -p tsconfig.cjs.json",
+    "start": "webpack serve --mode development"
+  },
+  "author": "JJongTaeng",
+  "license": "MIT",
+  "dependencies": {
+    "common-iutils": "^1.0.3"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "^8.11.3",
+    "@testing-library/jest-dom": "^5.16.1",
+    "@tsconfig/node14": "^1.0.1",
+    "@types/jest": "^27.4.0",
+    "css-loader": "^6.5.1",
+    "gh-pages": "^3.2.3",
+    "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.4.7",
+    "mini-css-extract-plugin": "^2.5.3",
+    "style-loader": "^3.3.1",
+    "ts-jest": "^27.1.3",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.5",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.3"
+  }
+}
