@@ -12,7 +12,7 @@ interface ColumnInterface {
 interface ColumnConstructorProps {
   span?: SpanType;
   children?: HTMLElement | string;
-  padding: number;
+  padding?: number;
 }
 
 type ColumnAttributeType = 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs' | 'style'
