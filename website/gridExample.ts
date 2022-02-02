@@ -57,7 +57,7 @@ export default function makeGridExample() {
     header: '카드4'
   });
 
-  const span = { xxl: '6', xl: '6', lg: '6', md: '12', sm: '12', xs: '24' }
+  const span = { xxl: 6, xl: 6, lg: 6, md: 12, sm: 12, xs: 24 }
 
   const $row = new Row();
 

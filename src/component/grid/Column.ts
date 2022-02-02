@@ -169,11 +169,11 @@ export default class Column extends HTMLElement implements ColumnInterface {
 
   setSpan(span: SpanType) {
     this.setAttribute('xxl', span.xxl.toString());
-    this.setAttribute('xl', span.toString());
-    this.setAttribute('lg', span.toString());
-    this.setAttribute('md', span.toString());
-    this.setAttribute('sm', span.toString());
-    this.setAttribute('xs', span.toString());
+    this.setAttribute('xl', span.xl.toString());
+    this.setAttribute('lg', span.lg.toString());
+    this.setAttribute('md', span.md.toString());
+    this.setAttribute('sm', span.sm.toString());
+    this.setAttribute('xs', span.xs.toString());
 
     return this;
   }
