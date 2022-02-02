@@ -1,6 +1,6 @@
 {
   "name": "common-igrid",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple Grid library using Webcomponent",
   "main": "dist/cjs/src/index.js",
   "module": "dist/esm/src/index.js",
