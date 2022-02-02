@@ -149,7 +149,7 @@ export default class Column extends HTMLElement implements ColumnInterface {
             width: calc(${md * 4.166666}% - ${padding}px);
         }
       }
-      @media(min-width: 992px) and (max-width: 1${padding}0px) {
+      @media(min-width: 992px) and (max-width: 1200px) {
         :host {
             width: calc(${lg * 4.166666}% - ${padding}px);
         }
