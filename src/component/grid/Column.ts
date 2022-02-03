@@ -77,7 +77,8 @@ export default class Column extends HTMLElement implements ColumnInterface {
     this.span.md = parseInt(this.getAttribute('md'))
     this.span.sm = parseInt(this.getAttribute('sm'))
     this.span.xs = parseInt(this.getAttribute('xs'))
-    this.padding = parseInt(this.getAttribute('padding'));
+    this.padding = parseInt(this.getAttribute('padding') || '0');
+
     this.updateStyleBySpan({
       ...this.span, padding: this.padding,
     })
@@ -126,12 +127,11 @@ export default class Column extends HTMLElement implements ColumnInterface {
           this.padding = newValue;
           break;
       }
-
       this.updateStyleBySpan({ ...this.span, padding: this.padding });
     }
   }
 
-  updateStyleBySpan({ xxl, xl, lg, md, sm, xs, padding }) {
+  updateStyleBySpan({ xxl, xl, lg, md, sm, xs, padding = 0 }) {
     this.$style.textContent = `
       :host {
         margin: ${padding / 2}px;
