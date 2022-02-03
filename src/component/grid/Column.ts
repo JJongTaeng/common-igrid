@@ -34,6 +34,7 @@ export default class Column extends HTMLElement implements ColumnInterface {
   private readonly $container: HTMLDivElement;
   private readonly $slot: HTMLSlotElement;
   private readonly $style: HTMLStyleElement;
+  private readonly $customStyle: HTMLStyleElement;
 
   padding: number = 0;
   span: SpanType = {
@@ -61,7 +62,8 @@ export default class Column extends HTMLElement implements ColumnInterface {
       .getElement();
 
     this.$style = document.createElement('style');
-    this.shadowRoot.append(this.$style, this.$container);
+    this.$customStyle = document.createElement('style');
+    this.shadowRoot.append(this.$style, this.$customStyle, this.$container);
 
     children && this.setContent(children);
     span && this.setSpan(span);
@@ -191,6 +193,11 @@ export default class Column extends HTMLElement implements ColumnInterface {
 
   setPadding(padding: number) {
     this.setAttribute('padding', padding.toString());
+    return this;
+  }
+
+  setStyle(style: string) {
+    this.$customStyle.textContent = this.$customStyle.textContent + style;
     return this;
   }
 }
