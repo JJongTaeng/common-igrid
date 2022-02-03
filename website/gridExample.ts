@@ -61,10 +61,10 @@ export default function makeGridExample() {
 
   const $row = new Row();
 
-  const $column1 = new Column({ children: $card1, span });
-  const $column2 = new Column({ children: $card2, span });
-  const $column3 = new Column({ children: $card3, span });
-  const $column4 = new Column({ children: $card4, span });
+  const $column1 = new Column({ children: $card1, span, padding: 20 });
+  const $column2 = new Column({ children: $card2, span, padding: 20 });
+  const $column3 = new Column({ children: $card3, span, padding: 20 });
+  const $column4 = new Column({ children: $card4, span, padding: 20 });
 
   $row.setContent($column1, $column2, $column3, $column4);
 
