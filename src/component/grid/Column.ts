@@ -9,7 +9,7 @@ interface ColumnInterface {
   setPadding(padding: number): this;
 }
 
-interface ColumnConstructorProps {
+export interface ColumnConstructorProps {
   span?: SpanType;
   children?: HTMLElement | string;
   padding?: number;

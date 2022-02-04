@@ -1,4 +1,4 @@
-import { Column, Row } from "../src/index";
+import { column, Column, row, Row } from "../src/index";
 import { Card } from "common-icard";
 import { Button } from "common-iform";
 import { IElement, IStyle } from 'common-iutils';
@@ -59,16 +59,12 @@ export default function makeGridExample() {
 
   const span = { xxl: 6, xl: 6, lg: 6, md: 12, sm: 12, xs: 24 }
 
-  const $row = new Row();
-
-  const $column1 = new Column({ children: $card1, span });
-  const $column2 = new Column({ children: $card2, span });
-  const $column3 = new Column({ children: $card3, span });
-  const $column4 = new Column({ children: $card4, span });
-
-  $row.setContent($column1, $column2, $column3, $column4);
+  const $column1 = column({ children: $card1, span, padding: 20 });
+  const $column2 = column({ children: $card2, span, padding: 20 });
+  const $column3 = column({ children: $card3, span, padding: 20 });
+  const $column4 = column({ children: $card4, span, padding: 20 });
 
   $generateButton.addEventListener('click', () => {
-    $generateWrapper.append($row);
+    $generateWrapper.append(row().setContent($column1, $column2, $column3, $column4));
   })
 };
